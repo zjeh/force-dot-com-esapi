@@ -35,3 +35,11 @@ String creditCard = ApexPages.currentPage().getParameters().get('creditcard');
 if (ESAPI.validator().isValidCreditCard(creditCard, false) == false)
     // do something here
 }}}
+
+Output Encoding:
+
+{{{
+String usertext = ApexPages.currentPage().getParameters().get('usertext');
+// the next line encodes the usertext similar to the VisualForce HTMLENCODE function but within an Apex class.
+usertext = ESAPI.encoder().SFDC_HTMLENCODE(usertext);
+}}}
