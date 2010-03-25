@@ -2,7 +2,7 @@
 
 === Overview ===
 
-This page is intended to give you a basic understanding of how to use the Force.com ESAPI library. This library is published by Salesforce.com under the New BSD license. You should read and accept the license before you use, modify, and/or redistribute this software.
+This page is intended to give a basic understanding of how to use the Force.com ESAPI library. This library is published by Salesforce.com under the New BSD license. You should read and accept the license before you use, modify, and/or redistribute this software.
 
 Follow the steps below to get started. For more detailed documentation on this library, please refer to the doc folder in the downloadable file.
 
