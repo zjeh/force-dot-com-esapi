@@ -27,3 +27,11 @@ try {
     */
 }
 }}}
+
+Input Validation:
+
+{{{
+String creditCard = ApexPages.currentPage().getParameters().get('creditcard');
+if (ESAPI.validator().isValidCreditCard(creditCard, false) == false)
+    // do something here
+}}}
