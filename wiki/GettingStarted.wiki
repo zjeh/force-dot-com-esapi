@@ -57,4 +57,4 @@ try {
 }
 }}}
 
-You can use Access Control also to check which objects fields the current user can read/update etc before presnting the page and not just on the insert/update/delete operation. 
+You can use Access Control also to check which objects fields the current user can read/update etc before presenting the page and not just on the insert/update/delete operation. 
