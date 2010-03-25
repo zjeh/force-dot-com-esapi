@@ -43,3 +43,14 @@ String usertext = ApexPages.currentPage().getParameters().get('usertext');
 // the next line encodes the usertext similar to the VisualForce HTMLENCODE function but within an Apex class.
 usertext = ESAPI.encoder().SFDC_HTMLENCODE(usertext);
 }}}
+
+Access Control:
+
+// s is a modified SObject
+
+try {
+    ESAPI.accessController().setSharingMode(SFDCAccessController.SharingMode.WITH);
+    ESAPI.accessController().updateAsUser(s, new List<String>{'data'});
+} catch (SFDCAccessControlException e) {
+    message = 'Access Control violation - Type: ' + e.getExceptionType() + ' Reason: ' + e.getExceptionReason() + ' Object: ' + e.getExceptionObject() + ' Field: ' + e.getExceptionField() + ' Text: ' + e.getText();
+}
