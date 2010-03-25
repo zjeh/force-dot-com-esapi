@@ -1,15 +1,29 @@
-= Getting started with Force.com ESAPI =
+== Getting started with Force.com ESAPI ==
 
+=== Overview ===
 
+This page is intended to give you a basic understanding of how to use the Force.com ESAPI library. This library is published by Salesforce.com under the New BSD license. You should read and accept the license before you use, modify, and/or redistribute this software.
 
+Follow the steps below to get started. For more detailed documentation on this library, please refer to the doc folder in the downloadable file.
 
+=== Steps ===
 
+  * Download the latest release from the download page.
+  * Make any modifications in the code if you need additional functionality not covered by the library.
+  * Upload the classes to your Force.com Org.
+  * Start using it in your other classes.
 
+=== Example Code ===
 
+Input Validation:
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+String creditCard = ApexPages.currentPage().getParameters().get('creditcard');
+try {
+    creditCard = ESAPI.validator().getValidCreditCard(creditCard, false);
+} catch (Exception e) {
+    /*
+    report error here using e.getMessage(). Make sure you escape the string before displaying it back on page, and also be careful not to expose any internal information.
+    */
+}
+}}}
