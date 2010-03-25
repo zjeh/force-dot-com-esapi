@@ -46,6 +46,7 @@ usertext = ESAPI.encoder().SFDC_HTMLENCODE(usertext);
 
 Access Control:
 
+{{{
 // s is a modified SObject
 
 try {
@@ -54,3 +55,6 @@ try {
 } catch (SFDCAccessControlException e) {
     message = 'Access Control violation - Type: ' + e.getExceptionType() + ' Reason: ' + e.getExceptionReason() + ' Object: ' + e.getExceptionObject() + ' Field: ' + e.getExceptionField() + ' Text: ' + e.getText();
 }
+}}}
+
+You can use Access Control also to check which objects fields the current user can read/update etc before presnting the page and not just on the insert/update/delete operation. 
