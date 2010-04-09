@@ -64,7 +64,9 @@ try {
     ESAPI.accessController().setSharingMode(SFDCAccessController.SharingMode.WITH);
     ESAPI.accessController().updateAsUser(s, new List<String>{'data'});
 } catch (SFDCAccessControlException e) {
-    message = 'Access Control violation - Type: ' + e.getExceptionType() + ' Reason: ' + e.getExceptionReason() + ' Object: ' + e.getExceptionObject() + ' Field: ' + e.getExceptionField() + ' Text: ' + e.getText();
+    message = 'Access Control violation - Type: ' + e.getExceptionType() + ' Reason: ' 
+        + e.getExceptionReason() + ' Object: ' + e.getExceptionObject() + ' Field: ' 
+        + e.getExceptionField() + ' Text: ' + e.getText();
 }
 }}}
 
