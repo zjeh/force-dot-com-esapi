@@ -27,7 +27,8 @@ try {
     creditCard = ESAPI.validator().getValidCreditCard(creditCard, false);
 } catch (Exception e) {
     /*
-    report error here using e.getMessage(). Make sure you escape the string before displaying it back on page, and also be careful not to expose any internal information.
+    report error here using e.getMessage(). Make sure you escape the string before
+    displaying it back on page, and also be careful not to expose any internal information.
     */
 }
 }}}
