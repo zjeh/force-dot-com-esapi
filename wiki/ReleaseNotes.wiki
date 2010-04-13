@@ -14,5 +14,5 @@
         * Moved SFDCInvalidCharacterException class into the SFDCCharacter class.
         * Moved SFDCValidationException class into the SFDCValidator class.
         * Changed the SFDCAccessControlException class to inherit directly from Exception.
-    * v0.1 - April 6, 2010
+    * v0.1 - March 25, 2010
         * Initial release.
