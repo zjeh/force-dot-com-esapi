@@ -1,6 +1,8 @@
 ==Release Notes==
 
 ===API Changes===
+    * v0.3
+        * Added functions for DML array operations (insertAsUser, updateAsUser, deleteAsUser) to the SFDCAccessControl class. These functions allow to insert, update, and delete arrays of objects.
     * v0.2
         * Moved SFDCInvalidCharacterException class into the SFDCCharacter class. If you are currently using this class make sure to call it with the encapsulating class: `SFDCCharacter.SFDCInvalidCharacterException`.
         * Moved SFDCValidationException class into the SFDCValidator class. If you are currently using this class make sure to call it with the encapsulating class: `SFDCValidator.SFDCValidationException`.
@@ -8,6 +10,9 @@
         * Initial release.
 
 ===All Changes===
+    * v0.3 - April 19, 2010
+        * Added functions for DML array operations (insertAsUser, updateAsUser, deleteAsUser) to the SFDCAccessControl class. These functions allow to insert, update, and delete arrays of objects.
+        * Added HOWTO examples to each API function.
     * v0.2 - April 12, 2010
         * Updated javadocs.
         * Added test classes.
