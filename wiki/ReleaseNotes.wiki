@@ -1,6 +1,10 @@
 ==Release Notes==
 
 ===API Changes===
+    * v0.4
+        * insertAsUser and updateAsUser for a single SObject now return the object they actually used to insert/update the db. (Fixes Issue #1)
+        * <font color="#FF0000">not backwards compatible</font> - insertAsUser, updateAsUser, and deleteAsUser for arrays of SObjects now return a new class object that can be used to get info such as Database.SaveResult[], Database.DeleteResult[], and the objects they actually used to insert/update the db. (Fixes Issue #1)
+        * Added insertAsUser and updateAsUser array operation functions that accept a list of fields as Schema.SObjectField[] instead of String[]. This helps avoid limiters that were hit due to the user of the fields member variable in the String[] variation. In addition it eliminates the namespace issues raised in Issue #2. (Fixes Issue #2 & Issue #3)
     * v0.3
         * Added functions for DML array operations (insertAsUser, updateAsUser, deleteAsUser) to the SFDCAccessControl class. These functions allow to insert, update, and delete arrays of objects.
     * v0.2
@@ -10,6 +14,10 @@
         * Initial release.
 
 ===All Changes===
+    * v0.4 - June 9, 2010
+        * insertAsUser and updateAsUser for a single SObject now return the object they actually used to insert/update the db. (Fixes Issue #1)
+        * <font color="#FF0000">not backwards compatible</font> - insertAsUser, updateAsUser, and deleteAsUser for arrays of SObjects now return a new class object that can be used to get info such as Database.SaveResult[], Database.DeleteResult[], and the objects they actually used to insert/update the db. (Fixes Issue #1)
+        * Added insertAsUser and updateAsUser array operation functions that accept a list of fields as Schema.SObjectField[] instead of String[]. This helps avoid limiters that were hit due to the user of the fields member variable in the String[] variation. In addition it eliminates the namespace issues raised in Issue #2. (Fixes Issue #2 & Issue #3)
     * v0.3 - April 19, 2010
         * Added functions for DML array operations (insertAsUser, updateAsUser, deleteAsUser) to the SFDCAccessControl class. These functions allow to insert, update, and delete arrays of objects.
         * Added HOWTO examples to each API function.
