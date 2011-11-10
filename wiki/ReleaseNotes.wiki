@@ -1,6 +1,11 @@
 ==Release Notes==
 
 ===API Changes===
+    * v0.5
+        * <font color="#FF0000">not backwards compatible</font> - Deprecated getViewableFields, getUpdateableFields, and getCreatableFields accepting an sObject as input. (Fixes Issue #6)
+        * Added new functions getViewableFields, getUpdateableFields, and getCreatableFields accepting an sObjectType as input. (Fixes Issue #6)
+        * Added new functions isAuthorizedToView, isAuthorizedToCreate, isAuthorizedToUpdate, and isAuthorizedToDelete. (Fixes Issue #5)
+        * Added a describe info cache. (Fixes Issue #3)
     * v0.4
         * insertAsUser and updateAsUser for a single SObject now return the object they actually used to insert/update the db. (Fixes Issue #1)
         * <font color="#FF0000">not backwards compatible</font> - insertAsUser, updateAsUser, and deleteAsUser for arrays of SObjects now return a new class object that can be used to get info such as Database.SaveResult[], Database.DeleteResult[], and the objects they actually used to insert/update the db. (Fixes Issue #1)
@@ -14,6 +19,11 @@
         * Initial release.
 
 ===All Changes===
+    * v0.5
+        * <font color="#FF0000">not backwards compatible</font> - Deprecated getViewableFields, getUpdateableFields, and getCreatableFields accepting an sObject as input. (Fixes Issue #6)
+        * Added new functions getViewableFields, getUpdateableFields, and getCreatableFields accepting an sObjectType as input. (Fixes Issue #6)
+        * Added new functions isAuthorizedToView, isAuthorizedToCreate, isAuthorizedToUpdate, and isAuthorizedToDelete. (Fixes Issue #5)
+        * Added a describe info cache. (Fixes Issue #3)
     * v0.4 - June 9, 2010
         * insertAsUser and updateAsUser for a single SObject now return the object they actually used to insert/update the db. (Fixes Issue #1)
         * <font color="#FF0000">not backwards compatible</font> - insertAsUser, updateAsUser, and deleteAsUser for arrays of SObjects now return a new class object that can be used to get info such as Database.SaveResult[], Database.DeleteResult[], and the objects they actually used to insert/update the db. (Fixes Issue #1)
