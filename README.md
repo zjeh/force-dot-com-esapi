@@ -12,3 +12,6 @@ The modules currently implemented are:
     Access Control for Force.com objects (CRUD/FLS and Sharing) 
 
 As an open source project, we welcome any comments, contributions, and any other help in the development and maintenance of this project.
+
+###### Code license
+[New BSD License](http://opensource.org/licenses/BSD-3-Clause)
